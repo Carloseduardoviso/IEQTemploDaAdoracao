@@ -1,0 +1,795 @@
+﻿<style>
+    .title {
+        display: inline-block;
+        padding: 0 5px;
+        background: #d15355;
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 14px;
+        color: #ffffff;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: none;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 2px;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .title-modal {
+        display: inline-block;
+        padding: 0 5px;
+        background: #3697be;
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 14px;
+        color: #ffffff;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: none;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        border-radius: 2px;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+</style>
+
+<!-- Container com os cards -->
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    <!-- Card 1 -->
+    <div class="card" style="width: 30rem;">
+        <div class="card-body">
+            <div class="card-title">
+                <div class="title">ORGANIZAÇÃO</div>
+            </div>
+            <h5>Presidente Nacional da Igreja do Evangelho Quadrangular</h5>
+            <hr />
+            <p><a href="#" data-bs-toggle="modal" data-bs-target="#modal1" style="color:#079FD6;">Saiba mais</a></p>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card" style="width: 30rem;">
+        <div class="card-body">
+            <div class="card-title">
+                <div class="title">ORGANIZAÇÃO</div>
+            </div>
+            <h5>Conselheiros Nacionais</h5>
+            <hr />
+            <p><a href="#" data-bs-toggle="modal" data-bs-target="#modal2" style="color:#079FD6;">Saiba mais</a></p>
+        </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card" style="width: 30rem;">
+        <div class="card-body">
+            <div class="card-title">
+                <div class="title">ORGANIZAÇÃO</div>
+            </div>
+            <h5>Secretarias Nacionais</h5>
+            <hr />
+            <p><a href="#" data-bs-toggle="modal" data-bs-target="#modal3" style="color:#079FD6;">Saiba mais</a></p>
+        </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card" style="width: 30rem;">
+        <div class="card-body">
+            <div class="card-title">
+                <div class="title">ORGANIZAÇÃO</div>
+            </div>
+            <h5>Conselhos Estaduais da Igreja do Evangelho Quadrangular</h5>
+            <hr />
+            <p><a href="#" data-bs-toggle="modal" data-bs-target="#modal4" style="color:#079FD6;">Saiba mais</a></p>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 1 -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modalLabel1" aria-hidden="true">
+    <div class="modal-dialog  modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="card-title">
+                    <div class="title-modal">ORGANIZAÇÃO</div>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row mb-4">
+                        <div class="col-md-12 d-flex p-3 border rounded">
+                            <div>
+                                <article class="">
+                                    <div>
+                                        <img src="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAAeAAD/4QNvaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6MDg4MDExNzQwNzIwNjgxMUE3QkFDMTIwOUE3M0NDMTIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NERBN0IxNEZGREUyMTFFMjkyNDRERTI1QTY5NTI5Q0UiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NERBN0IxNEVGREUyMTFFMjkyNDRERTI1QTY5NTI5Q0UiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowMTgwMTE3NDA3MjA2ODExOTJCMERBM0I4NUU4OTJGOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowODgwMTE3NDA3MjA2ODExQTdCQUMxMjA5QTczQ0MxMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6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qgYJadUvLKSwok8DDOShL/Be74tSXxNr040ww7iHZhzl7QNZXE1hC8n2xqWjeeFZSS/qgzM7SSopNV9pDt0aerLICvryeU49zTREb02sk3xpIhq5TCSk+9rDxME43aVlFS7niBknuMXWMvZUwT3EUs6VyWJgktwm3Sa8UzXluL1aan4pBF7241OkcUYHKTzdSfUnzL7dO5fhF444+BUbm26anb9W8+1QRknsIadUErkH+XBm63onGncYk3YvOMfllikRWnatS291X7NXBYXIPOnE665rLgaru2teqjUuziZ7dxSSTCsvIPPHkMlX2FXJLBfxQA2RxpyK1q+4lN0r7QDfD3k6iFR4kNAHOq7ysa1qJIvaVWQZrcW/wPoXQNmtp0y0mqTur1J98svYqHh9htnudzasJY3ZKPg3iz6SkkklksEIVIANMgAAAAAAAAAAAAAAAB5b7y9LXtdXz0n7KxAJeFnLzT00WnIwbjJ6a048wCNNyx6fo2qVpowMT06nmAQXlophkJadKzAA0Ooft9H6tKcamtb9HQvS+ThSlACo1epaPTjWueFDN0vT+1efzP8AAAvROrcWinEvHTTCoBFXWjDMrLTXjQACVo4Vz7CstOGYAErTh3jy4ZgFFfLVUqWWmnEAB5KcQ9FeIAFZae0xzpVZ1AAxTpwr2Gtd1fTUAI0rmvGtadhh8naAVDydpt7P9r61vTr9TVxpQAK6l/ThnUruNOu1nqpiARWO76VeNewva7agAbS+XGpR+nUABhxqT5avOoABaacQtNcK0AAq9NMKmazo4V/EAg732x6P/lbOvPTLRy1Uf4HuACzhKAAqAAAAAAAAP//Z" data-filename="Mario de Oliveira.jpg" style="width: 25%; float: left;">
+                                    </div>
+                                    <div>
+                                        <span class="badge bg-danger text-white" style="font-size: 12px;">Mário de Oliveira</span>
+                                        <h3 style="margin-top: 10px;">Mário de Oliveira</h3>
+                                        <p><strong>Presidente Nacional</strong></p>
+                                    </div>
+
+                                    <p>
+                                        Desde cedo, Mário de Oliveira se acostumou a assumir responsabilidades de adulto. Para não deixar sua mãe sozinha na missão de criar cinco filhos, ele teve que trabalhar pesado junto com seu irmão, Antônio Genaro, a fim de lhe ajudar a compor a renda familiar. E, mesmo tendo passado por uma vida difícil, com tão poucos recursos, ele sempre seguiu em frente com ânimo e coragem.
+                                    </p>
+
+                                    <p>
+                                        Conforme os anos se passaram, muitas dificuldades surgiram. No entanto, pela misericórdia de Deus, elas foram vencidas. Isso porque o pastor Mário entregou-se ao ministério do Senhor, doou-se por completo ao serviço da obra. Porém, essa escolha lhe rendeu uma grande batalha contra a discriminação religiosa da época.
+                                    </p>
+
+                                    <p>
+                                        Na década de 60, o preconceito contra cristãos era muito forte. Quem se declarasse “crente” sofria com a rejeição de amigos e familiares, corria até mesmo o risco de perder o emprego. Foi nesse contexto social que sua mãe, Margarida, começou a frequentar a Igreja do Evangelho Quadrangular, a convite de uma amiga. Ela tinha o costume de ir diariamente aos cultos ministrados no Tabernáculo da cidade de Bauru, no estado de São Paulo.
+                                    </p>
+
+                                    <p>
+                                        No início, Mário estranhou e discordou de sua mãe quando soube que ela estava frequentando uma igreja evangélica. Seus amigos começaram a zombar dizendo: “Mário, agora você é crente! Aleluia, irmão!”. Estas palavras aumentavam ainda mais a sua raiva. Por causa disso, ele resolveu ir até a igreja para tirar satisfações com o pastor. Ao chegar, logo foi recebido com um amor e paz que só Jesus pode oferecer. E, daquele dia em diante, Mário nunca mais tirou os pés da Igreja do Evangelho Quadrangular.
+                                    </p>
+
+                                    <p>
+                                        Alguns meses depois, ele já estava pregando em lares, cultos e praças. Tinha 19 anos quando ingressou no ministério como Obreiro da Igreja. O amor dele pela casa de Deus aumentava cada vez mais. Além de evangelizar pessoalmente, o jovem pastor abriu dezesseis igrejas que estão distribuídas entre os estados de São Paulo, Rio Grande do Sul e Minas Gerais. As cidades contempladas foram Assis, Lençóis Paulista, Uruguaiana, Itaqui, Pelotas, Canoas, Porto Alegre, Juiz de Fora, Betim, Ipatinga, Corinto, Pará de Minas e Belo Horizonte.
+                                    </p>
+
+                                    <p>
+                                        Em 1996, Mário de Oliveira foi eleito Presidente Nacional da Igreja do Evangelho Quadrangular e reuniu, com sucesso, uma Comissão Especial para realizar a reforma estatutária, nos anos de 1998 e 1999. Por reconhecimento ao seu trabalho, ele foi reeleito em 2000, 2004, 2008, 2012 e 2016.
+                                    </p>
+
+                                    <p>
+                                        Atualmente, a Quadrangular possui mais de 17 mil templos e obras abertas e estruturadas em todo o País. Mais de 30 mil obreiros estão levando os ensinamentos de Jesus a mais de dois milhões de pessoas em 22 nações. Sua administração tem proporcionado um crescimento sólido e constante, tornando a Igreja propulsora que, por meio da união do ministério e fortificação dada por Cristo, motiva seus pastores e membros a irem em busca daqueles que necessitam desse conhecimento.
+                                    </p>
+                                </article>
+                                </<div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="card-title">
+                    <div class="title-modal">ORGANIZAÇÃO</div>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <h2>Conselheiros Nacionais</h2>
+                <div class="container">
+                    <div class="row mb-4">
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br/GerenciadorConteudo/Fotos/3596325c-9d68-4887-86fd-858e2455acca/Jeferson%20Campos.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Jeferson Campos</span>
+                                <h3 style="margin-top: 10px;">Jefferson Alves de Campos</h3>
+                                <p><strong>1° Vice-presidente</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos/Pr_Luiz_Antonio06.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Luiz Antônio</span>
+                                <h3 style="margin-top: 10px;">Luiz Antônio da Silva</h3>
+                                <p><strong>2° Vice-presidente</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos//c802a788-ceda-47eb-8639-d529e83ef120/Cecilio%20Mota.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Cecílio Motta</span>
+                                <h3 style="margin-top: 10px;">Cecílio Motta De Faria Neto</h3>
+                                <p><strong>3° Vice-presidente</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos//96c2f96a-65cb-4f4c-bb36-98416c71d711/joao.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">João Antônio</span>
+                                <h3 style="margin-top: 10px;">João Antônio de Araújo</h3>
+                                <p><strong>4° Vice-presidente</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+
+                <div class="container">
+                    <div class="row mb-4">
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos//b29ba06d-a4ed-4954-83d8-c2efdea652a5/Joaquim%20Ribeiro.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Joaquim Ribeiro</span>
+                                <h3 style="margin-top: 10px;">Joaquim Ribeiro Cantagalli</h3>
+                                <p><strong>1° Secretário</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos//fb41057e-e3a9-478d-aeaa-429fc565405f/Dionizia%20Luvizotto.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Dionízia José</span>
+                                <h3 style="margin-top: 10px;">Dionízia José Gomes Luvizotto</h3>
+                                <p><strong>2° Secretária</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos//3e8eda82-0950-4375-befb-b7e0ecb85c9d/Guaracy%20Batista.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Guaracy Batista</span>
+                                <h3 style="margin-top: 10px;">Guaracy Batista da Silveira</h3>
+                                <p><strong>3° Secretário</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos//84a1c6a0-3981-46a2-906c-c5f13431e042/bengston.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Paulo Bengtson</span>
+                                <h3 style="margin-top: 10px;">Paulo Bengtson</h3>
+                                <p><strong>4° Secretário</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr />
+                </div>
+
+                <div class="container">
+                    <div class="row mb-4">
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos//a7aa3825-5186-4796-9302-48e2a758f6f1/Durvalino%20Brocanelli.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Durvalino Brocanelli</span>
+                                <h3 style="margin-top: 10px;">Durvalino Brocanelli</h3>
+                                <p><strong>1° Tesoureiro</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos//bb06afea-7d10-45e1-9e4a-c71e4ff49336/Adalfo%20Bezerra.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Adolfo Bezerra</span>
+                                <h3 style="margin-top: 10px;"> Adolfo Bezerra</h3>
+                                <p><strong>2° Tesoureiro</strong></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos//9cc10ff4-f002-4ddd-b43b-f2f47b3ebeaf/Nelson%20Agnoletto.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Nelson Agnoletto</span>
+                                <h3 style="margin-top: 10px;">Nelson Agnoletto</h3>
+                                <p><strong>3° Tesoureiro</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos/IrineuRodrigues/IrineuRodrigues.png"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Irineu Rodrigues</span>
+                                <h3 style="margin-top: 10px;">Irineu Rodrigues</h3>
+                                <p><strong>4° Tesoureiro</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel3">Secretarias Nacionais</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <h2>Secretarias Nacionais</h2>
+                <div class="container">
+                    <div class="row mb-4">
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos//02c78f71-ec4e-4a44-9790-9833de8af8ab/acao-social.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Ação Social</span>
+                                <h3 style="margin-top: 10px;">Secretaria Geral de Ação Social</h3>
+                                <p>A Secretaria Geral de Ação Social é respon­sável pelo desenvolvimento e execução dos programas de assistên­cia social.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos//765c0e97-a735-4feb-aa71-aa9cf3da24d0/logo%20sgaf-Oficial.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Administração e Finanças</span>
+                                <h3 style="margin-top: 10px;">Secretaria Geral de Administração e Finanças</h3>
+                                <p>É o órgão responsável pelas atividades administrativas, de caráter financeiro e burocrático do Conselho Nacional de Diretores</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4">
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos//b74a0912-69f2-435b-ab46-28564278d11d/logo_cidadania.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Cidadania</span>
+                                <h3 style="margin-top: 10px;">Secretaria Geral de Cidadania</h3>
+                                <p>É responsável pela implantação, desenvolvimento e coordenação dos programas referente à doutrina social e política.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos//2b86af14-7d58-42e9-a414-1c42d1b790a1/SGC_Logo%20da%20SGC.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Comunicação</span>
+                                <h3 style="margin-top: 10px;">Secretaria Geral de Comunicação</h3>
+                                <p>É responsável pela administração, controle e produção do material de comunicação falada, escrita, televisada e informatizada.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos//1a902064-4c28-448c-b18f-4b96b0c095e3/secretaria_coodenadorias.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Coordenadorias</span>
+                                <h3 style="margin-top: 10px;">Secretaria Geral de Coordenadorias</h3>
+                                <p>É responsável por programar o crescimento espiritual dos membros da Igreja em grupos Missionários.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos//aed39729-59c1-45de-bca2-43873691395f/logoisntitucional.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Educação e Cultura</span>
+                                <h3 style="margin-top: 10px;">Secretaria Geral de Educação e Cultura</h3>
+                                <p>É responsável pelo planejamento, execução, fiscalização, avaliação e atualização dos programas educacionais e culturais, no âmbito bíbli­co, teológico e ministerial.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-md-6 d-flex p-3 border rounded">
+                            <img src="https://sgaf.org.br//GerenciadorConteudo/Fotos//39df4e34-beeb-49ac-9d30-3ccd18b9d4f6/LOGO_sgmq.jpg"
+                                 class="rounded me-3" style="width: 180px; height: 170px;" alt="Foto do Conselheiro">
+                            <div>
+                                <span class="badge bg-danger text-white" style="font-size: 12px;">Missões</span>
+                                <h3 style="margin-top: 10px;">Secretaria Geral de Missões</h3>
+                                <p>É responsável pela administração do programa de Missões nacionais e internacionais.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 4 -->
+<div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modalLabel4" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel4">Conselhos Estaduais</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row mb-4">
+                        <div class="col-md-12 d-flex p-3 border rounded">
+                            <div>
+                                <section class="uk-section uk-section-default">
+                                    <div class="uk-container">
+                                        <h2 class="uk-heading-line uk-text-center"><span>Conselhos Estaduais da IEQ</span></h2>
+                                        <p class="uk-text-lead uk-text-center">
+                                            A Igreja do Evangelho Quadrangular é administrada em todo o Brasil por meio dos Conselhos Estaduais de Diretores (CEDs), que coordenam regionalmente as atividades ministeriais. Cada estado possui um presidente e sua equipe de apoio, responsáveis por promover a unidade, a visão e a doutrina da IEQ em suas respectivas regiões.
+                                        </p>
+
+                                        <div class="container card">
+                                            <div class="row mb-4">
+                                                <div class="col-md-4 d-flex p-4 rounded">
+                                                    <article class="card card-default card-small border-rounded">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Acre</h3>
+                                                            <p><strong>Presidente:</strong> Raimundo Nonato Moreira Silva</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (68) 3223-4883</li>
+                                                                <li><strong>Email:</strong> revmoreira@gmail.com</li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+
+                                                <div class="col-md-4 d-flex p-3 rounded">
+                                                    <article class="card card-default card-small border-rounded mt-2">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Alagoas</h3>
+                                                            <p><strong>Presidente:</strong> João Luiz Rocha</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (82) 3326-6854</li>
+                                                                <li><strong>Email:</strong> ced-al@igrejaquadrangular.org.br</li>
+                                                                <li><strong>Website:</strong> <a href="https://igrejaquadrangularalagoas.blogspot.com.br" target="_blank">igrejaquadrangularalagoas.blogspot.com.br</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                                <div class="col-md-4 d-flex p-3 rounded">
+                                                    <article class="card card-default card-small border-rounded mt-2">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Amazonas</h3>
+                                                            <p><strong>Presidente:</strong> Manoel Geny Martins Pereira</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (92) 3234-8023</li>
+                                                                <li><strong>Email:</strong> ced.ieqam@gmail.com</li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-4">
+                                                <div class="col-md-4 d-flex p-4 rounded">
+                                                    <article class="card card-default card-small border-rounded mt-2">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Amapá</h3>
+                                                            <p><strong>Presidente:</strong> Guaracy Batista da Silva Junior</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (96) 3222-7756</li>
+                                                                <li><strong>Email:</strong> pastora-tania@hotmail.com</li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+
+                                                <div class="col-md-4 d-flex p-3 rounded">
+                                                    <article class="card card-default card-small border-rounded mt-2">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Bahia</h3>
+                                                            <p><strong>Presidente:</strong> Erivelton Allison Tavares</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (71) 3334-5344</li>
+                                                                <li><strong>Email:</strong> ced-ba@igrejaquadrangular.org.br</li>
+                                                                <li><strong>Website:</strong> <a href="https://www.ieqbahia.com.br" target="_blank">www.ieqbahia.com.br</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                                <div class="col-md-4 d-flex p-3 rounded">
+                                                    <article class="card card-default card-small border-rounded mt-2">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Ceará</h3>
+                                                            <p><strong>Presidente:</strong> Nelson Carlson</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (85) 3283-7104</li>
+                                                                <li><strong>Email:</strong> ced-ce@igrejaquadrangular.org.br</li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-4">
+                                                <div class="col-md-4 d-flex p-4 rounded">
+                                                    <article class="card card-default card-small border-rounded mt-2">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Distrito Federal</h3>
+                                                            <p><strong>Presidente:</strong> Manoel da Silva Siqueira</p>
+                                                            <ul class="list uk-list-collapse">
+                                                                <li><strong>Telefone:</strong> (61) 3354-5231</li>
+                                                                <li><strong>Email:</strong> supervisao-df@igrejaquadrangular.org.br</li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+
+                                                <div class="col-md-4 d-flex p-3 rounded">
+                                                    <article class="card card-default card-small border-rounded mt-2">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Espírito Santo</h3>
+                                                            <p><strong>Presidente:</strong> Dolores de Oliveira Souza</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (27) 3223-9150</li>
+                                                                <li><strong>Email:</strong> ced-go@igrejaquadrangular.org.br</li>
+                                                                <li><strong>Website:</strong> <a href="www.cedgoias.org.br" target="_blank">www.cedgoias.org.br</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                                <div class="col-md-4 d-flex p-3 rounded">
+                                                    <article class="card card-default card-small border-rounded mt-2">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Maranhão</h3>
+                                                            <p><strong>Presidente:</strong> Paulo Guilherme F. Oliveira</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (98) 3303-2083</li>
+                                                                <li><strong>Email:</strong> ced-ma@igrejaquadrangular.org.br</li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-4">
+                                                <div class="col-md-4 d-flex p-4 rounded">
+                                                    <article class="card card-default card-small border-rounded mt-2">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Minas Gerais</h3>
+                                                            <p><strong>Presidente:</strong> Antônio Genaro de Oliveira</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (31) 2532-8080</li>
+                                                                <li><strong>Email:</strong> ced-mg@igrejaquadrangular.org.br</li>
+                                                                <li><strong>Website:</strong> <a href="www.ieqmg.org.br" target="_blank">www.ieqmg.org.br</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+
+                                                <div class="col-md-4 d-flex p-3 rounded">
+                                                    <article class="card card-default card-small border-rounded mt-2">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Mato Grosso do Sul</h3>
+                                                            <p><strong>Presidente:</strong> Jackson Luis Luvizotto</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (67) 3027-1179</li>
+                                                                <li><strong>Email:</strong> ced-ms@igrejaquadrangular.org.br</li>
+                                                                <li><strong>Website:</strong> <a href="www.quadrangularms.com.br" target="_blank">www.quadrangularms.com.br</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                                <div class="col-md-4 d-flex p-3 rounded">
+                                                    <article class="card card-default card-small border-rounded mt-2">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">Mato Grosso</h3>
+                                                            <p><strong>Presidente:</strong> Antônio Alves Ferreira</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (65) 3634-3529</li>
+                                                                <li><strong>Email:</strong>  ced-mt@igrejaquadrangular.org.br</li>
+                                                                <li><strong>Website:</strong> <a href="www.quadrangularmatogrosso.com.br" target="_blank">www.quadrangularmatogrosso.com.br</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-4">
+                                                <div class="col-md-4 d-flex p-4 rounded">
+                                                    <article class="card uk-card-default card-small border-rounded mt-2">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Pará</h3>
+                                                            <p><strong>Presidente:</strong> Josue Bengtson</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (91) 3244-0142</li>
+                                                                <li><strong>Email:</strong> ced-pa@igrejaquadrangular.org.br</li>
+                                                                <li><strong>Website:</strong> <a href="http://www.quadrangularpara.org" target="_blank">www.quadrangularpara.org</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+
+                                                <div class="col-md-4 d-flex p-3 rounded">
+                                                    <article class="card card-default card-small border-rounded mt-2">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Paraíba</h3>
+                                                            <p><strong>Presidente:</strong> Jaime Ferreira</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (83) 2182-7376 / (83) 98132-5832</li>
+                                                                <li><strong>Email:</strong> ieqparaiba.contato@gmail.com</li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                                <div class="col-md-4 d-flex p-3 rounded">
+                                                    <article class="card card-default card-small border-rounded">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Pernambuco</h3>
+                                                            <p><strong>Presidente:</strong> Sergio dos Santos</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (81) 3269-3860</li>
+                                                                <li><strong>Email:</strong> ced-pe@igrejaquadrangular.org.br</li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-4">
+                                                <div class="col-md-4 d-flex p-4 rounded">
+                                                    <article class="card card-default card-small border-rounded">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Piauí</h3>
+                                                            <p><strong>Presidente:</strong> Admir Goncalves de Oliveira</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (86) 3303-2564</li>
+                                                                <li><strong>Email:</strong> supervisao-pi@igrejaquadrangular.org.br</li>
+                                                                <li><strong>Website:</strong> <a href="http://www.quadrangularpiaui.com.br" target="_blank">www.quadrangularpiaui.com.br</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+
+                                                <div class="col-md-4 d-flex p-3 rounded">
+                                                    <article class="card card-default card-small border-rounded">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Paraná</h3>
+                                                            <p><strong>Presidente:</strong> Irineu Rodrigues</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (41) 3213-3100</li>
+                                                                <li><strong>Email:</strong> ced-pr@igrejaquadrangular.org.br</li>
+                                                                <li><strong>Website:</strong> <a href="http://www.portalquadrangular.org.br" target="_blank">www.portalquadrangular.org.br</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                                <div class="col-md-4 d-flex p-3 rounded">
+                                                    <article class="card card-default card-small border-rounded">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Rio de Janeiro</h3>
+                                                            <p><strong>Presidente:</strong> Vander Antonio da Silva</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (21) 2401-9754</li>
+                                                                <li><strong>Email:</strong> ced-rj@igrejaquadrangular.org.br</li>
+                                                                <li><strong>Website:</strong> <a href="http://www.conselhoieqrj.com.br" target="_blank">www.conselhoieqrj.com.br</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-4">
+                                                <div class="col-md-4 d-flex p-4 rounded">
+                                                    <article class="card card-default card-small border-rounded">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Rio Grande do Norte</h3>
+                                                            <p><strong>Presidente:</strong> Cesio Adriano Alves da Silva</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (84) 3653-4539</li>
+                                                                <li><strong>Email:</strong> supervisao-rn@igrejaquadrangular.org.br</li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+
+                                                <div class="col-md-4 d-flex p-3 rounded">
+                                                    <article class="card card-default card-small border-rounded">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Rondônia</h3>
+                                                            <p><strong>Presidente:</strong> Antonio Jose Pinto</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (69) 3223-0632</li>
+                                                                <li><strong>Email:</strong> ced-ro@igrejaquadrangular.org.br</li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                                <div class="col-md-4 d-flex p-3 rounded">
+                                                    <article class="card card-default card-small border-rounded">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Roraima</h3>
+                                                            <p><strong>Presidente:</strong> Edna dos Santos Macedo</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (95) 3626-2446</li>
+                                                                <li><strong>Email:</strong> supervisao-rr@igrejaquadrangular.org.br</li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-4">
+                                                <div class="col-md-4 d-flex p-4 rounded">
+                                                    <article class="card card-default card-small border-rounded">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Rio Grande do Sul</h3>
+                                                            <p><strong>Presidente:</strong> Solon Pereira Soares</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (51) 3224-4820</li>
+                                                                <li><strong>Email:</strong> ced-rs@igrejaquadrangular.org.br</li>
+                                                                <li><strong>Website:</strong> <a href="http://www.quadrangularrs.com.br/convencao" target="_blank">www.quadrangularrs.com.br/convencao</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+
+                                                <div class="col-md-4 d-flex p-3 rounded">
+                                                    <article class="card card-default card-small border-rounded">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Santa Catarina</h3>
+                                                            <p><strong>Presidente:</strong> Narcizo Luiz Parisotto</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (48) 3333-6715</li>
+                                                                <li><strong>Email:</strong> contato@ieq-sc.com</li>
+                                                                <li><strong>Website:</strong> <a href="http://www.ieqsc.com" target="_blank">www.ieqsc.com</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                                <div class="col-md-4 d-flex p-3 rounded">
+                                                    <article class="card card-default card-small border-rounded">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Sergipe</h3>
+                                                            <p><strong>Presidente:</strong> Luiz Antônio da Silva</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (79) 3217-8477</li>
+                                                                <li><strong>Email:</strong> supervisao-se@igrejaquadrangular.org.br</li>
+                                                                <li><strong>Website:</strong> <a href="http://www.quadrangular.org.br" target="_blank">www.quadrangular.org.br</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+                                            </div>
+
+                                            <div class="row mb-4">
+                                                <div class="col-md-4 d-flex p-4 rounded">
+                                                    <article class="card card-default card-small border-rounded">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED São Paulo</h3>
+                                                            <p><strong>Presidente:</strong> Antonio Carlos Stefan</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (11) 3224-1199</li>
+                                                                <li><strong>Email:</strong> ced-sp@igrejaquadrangular.org.br</li>
+                                                                <li><strong>Website:</strong> <a href="http://www.portalbr4.com.br/SP/" target="_blank">www.portalbr4.com.br/SP/</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>
+
+                                                <div class="col-md-4 d-flex p-3 rounded">
+                                                    <article class="card card-default card-small border-rounded">
+                                                        <div class="card-body">
+                                                            <h3 class="card-title">CED Tocantins</h3>
+                                                            <p><strong>Presidente:</strong> Guaracy Batista da Silveira</p>
+                                                            <ul class="list list-collapse">
+                                                                <li><strong>Telefone:</strong> (91) 3276-9816</li>
+                                                                <li><strong>Email:</strong> supervisaotocantins@gmail.com</li>
+                                                            </ul>
+                                                        </div>
+                                                    </article>
+                                                </div>                                                
+                                            </div>                                          
+                                        </div>                                   
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

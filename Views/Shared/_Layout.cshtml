@@ -22,8 +22,39 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="sobreQuadrangular" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Sobre Quadrangular
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="sobreQuadrangular">
+                                <li><a class="dropdown-item" asp-controller="SobreQuadrangular" asp-action="HistoriaDaQuadrangular">Historia da Quadrangular</a></li>
+                                <li><a class="dropdown-item" asp-controller="SobreQuadrangular" asp-action="NoQueCremos">No que Cremos</a></li>
+                                <li><a class="dropdown-item" asp-controller="SobreQuadrangular" asp-action="DoutrinaQuadrangular">Doutrina Quadrangular</a></li>
+                                <li><a class="dropdown-item" asp-controller="SobreQuadrangular" asp-action="NossaMissão">Nossa Missão</a></li>
+                                <li><a class="dropdown-item" asp-controller="SobreQuadrangular" asp-action="OrganizaçãoQuadrangular">Organização Quadrangular</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="ministeriosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Ministérios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="ministeriosDropdown">
+                                <li><a class="dropdown-item" asp-controller="Diaconato" asp-action="Index">Diaconato</a></li>
+                                <li><a class="dropdown-item" asp-controller="Louvor" asp-action="Index">Louvor</a></li>
+                                <li><a class="dropdown-item" asp-controller="Danca" asp-action="Index">Dança</a></li>
+                                <li><a class="dropdown-item" asp-controller="Teatro" asp-action="Index">Teatro</a></li>
+                                <li><a class="dropdown-item" asp-controller="Homens" asp-action="Index">Homens</a></li>
+                                <li><a class="dropdown-item" asp-controller="Mulheres" asp-action="Index">Mulheres</a></li>
+                                <li><a class="dropdown-item" asp-controller="Crianca" asp-action="Index">Criança</a></li>
+                                <li><a class="dropdown-item" asp-controller="Abençoar" asp-action="Index">Abençoar</a></li>
+                                <li><a class="dropdown-item" asp-controller="Jovens" asp-action="Index">Jovens</a></li>
+                            </ul>
+                        </li>
+
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Sobre Nós</a>
                         </li>
                     </ul>
                 </div>
@@ -36,11 +67,27 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - IEQTemploDaAdoracao - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="border-top footer bg-light text-muted">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+            <div class="mb-2 mb-md-0">
+                <p class="mb-1"><strong>IEQ Templo da Adoração</strong></p>
+           
+                <a href="https://www.google.com/maps/place/R.+Maldonado,+3249+-+Cidade+Nova,+Porto+Velho+-+RO"
+                   target="_blank" class="text-decoration-none text-reset d-block" title="Ver localização no Google Maps">
+                    <img src="~/img/location.svg" alt="Ícone de Localização do IEQ Templo da Adoração" />
+                    R. Maldonado, 3249 - Cidade Nova, Porto Velho - RO, 76810-561
+                </a>
+            </div>
+
+            <div>
+                &copy; 2025 IEQ Templo da Adoração. Todos os direitos reservados. |
+                <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-decoration-none">
+                    Política de Privacidade
+                </a>
+            </div>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
